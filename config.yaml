@@ -67,10 +67,6 @@ contact: 'kubdatalab@kb.dk'
 # Order of episodes in your lesson
 episodes: 
 - intro.Rmd
-- intro-to-r.Rmd
-- starting-with-data.Rmd
-- dplyr-tidyr.Rmd
-- functions-plots.Rmd
 - whats-next.Rmd
 - possible-chatbots.Rmd
 - traps-and-ethics.Rmd

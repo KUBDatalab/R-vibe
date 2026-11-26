@@ -44,7 +44,7 @@ The function attempts to identify personal identifiable data.
 
 Pas på kategoriske variable der er kodet som tal. De bliver behandlet som tal...
 
-Øh? der er noget galt med forks?
+Øh? der er noget galt med forks? ugeb=
 ```{r}
 library(FakeDataR)
 generate_fake_data(mtcars) |> saveRDS(file = "/episodes/data/test.rds")

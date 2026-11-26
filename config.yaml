@@ -8,18 +8,25 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor training for instance)
 # incubator: The Carpentries Incubator
+# Note that you can also use a custom carpentry type. For more info,
+# see the documentation: https://carpentries.github.io/sandpaper-docs/editing.html
 carpentry: 'lc'
+
+# Custom carpentry description
+# This will be used as the alt text for the logo
+# carpentry_description: "Custom Carpentry"
 
 # Overall title for pages.
 title: 'Introduction to R'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created:
+created: 
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries, KUB Datalab'
 
 # Life cycle stage of the lesson
+# refer to <https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html> for details
 # possible values: pre-alpha, alpha, beta, stable
 life_cycle: 'stable'
 
@@ -58,21 +65,25 @@ contact: 'kubdatalab@kb.dk'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes:
+episodes: 
 - intro.Rmd
 - intro-to-r.Rmd
 - starting-with-data.Rmd
 - dplyr-tidyr.Rmd
 - functions-plots.Rmd
 - whats-next.Rmd
+- possible-chatbots.Rmd
+- traps-and-ethics.Rmd
+- techniques.Rmd
+- what-is-an-llm.Rmd
 
 # Information for Learners
-learners:
+learners: 
 - setup.md
 - reference.md
 
 # Information for Instructors
-instructors:
+instructors: 
 
 # Learner Profiles
 profiles: 

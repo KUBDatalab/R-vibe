@@ -32,12 +32,44 @@ De fleste R-funktioner bruger na.rm = TRUE for at fjerne manglende værdier før
 
 Enkelte af dem bruger andre argumentnavne og værdier. Det kan der gå ged i.
 
+IKKE UPLOADE DINE DATA TIL CHATTY
+
+Undertiden er det helt uproblematisk. Undertiden fører det til en overskrift i Ekstra Bladet. 
+
+Et trick er at generere fake data. Og den lette måde er `FakeDataR`
+
+generate_fake_data tager en eksisterende dataframe, og returnerer en ny, med samme struktur, og data der følger (ca) samme fordeling som de oprindelige data.
+
+The function attempts to identify personal identifiable data.
+
+Pas på kategoriske variable der er kodet som tal. De bliver behandlet som tal...
+
+Øh? der er noget galt med forks?
+```{r}
+library(FakeDataR)
+generate_fake_data(mtcars) |> saveRDS(file = "/episodes/data/test.rds")
+
+
+FakeDataR::generate_llm_prompt("test.rds", write_file = FALSE) 
+
+```
+
+generate_llm_prompt giver metadata på data, og en umiddelbar prompt at kaste efter 
+
+```{r}
+library(tidyverse)
+mtcars |>  mutate(cyl = as.factor(cyl)) |> 
+generate_fake_data()  
+```
+
+```{r}
+summary(mtcars)
+```
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- Avoid uploading your real data to the chat
+- Use packages like FakeDataR for constructing fake data representing the structure of your data.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
